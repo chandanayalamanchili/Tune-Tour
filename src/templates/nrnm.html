@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>nrnm</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<style>
+	body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  background-color: rgb(190, 148, 84);
+}
+
+.left {
+  flex: 1;
+  background-color: rgb(190, 148, 84);
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column; 
+}
+
+.left-heading {
+  padding-top: 100px;
+  background-color: rgb(190, 148, 84);
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  /* border-bottom: 2px solid #ddd; */
+}
+
+.left-content {
+  flex: 1;
+  display: flex;
+  flex-direction: row; 
+  background-color: #eee;
+}
+
+.left-row {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* border-right: 1px solid #ddd;  */
+  background-color:rgb(190, 148, 84);
+}
+
+.left-col {
+  flex: 1;
+  margin: 10px;
+  display: flex;
+  background-color: #000;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-col h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.left-col p {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+}
+
+/* .right {
+  flex: 1;
+  background-color: #fff;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} */
+
+.right{
+    overflow: scroll;
+}
+
+.image {
+  width: 60%;
+  height: 40%;
+  object-fit: cover;
+}
+
+/* .rightt-content {
+  flex: 1;
+  display: flex;
+  flex-direction: row; 
+  background-color: #eee;
+} */
+.right-content{
+    overflow: scroll;
+}
+
+.right-row {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #ddd; 
+  overflow: scroll;
+}
+
+.right-col {
+  flex: 1;
+  margin: 10px;
+  display: flex;
+  background-color: #000;
+  color:white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.right-col .active {
+      background-color: yellow;
+    }
+.rightt-col h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+.right-col :hover {
+      flex: 1;
+      display: flex;
+      background-color: #000;
+      background-color: yellow;
+      flex-direction: column
+    }
+.right-col p {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+}
+.song-details {
+  background-color: rgb(190, 148, 84);
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navbar {
+            overflow: hidden;
+            background-color: hsl(0, 0%, 0%);
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #fbe5e5;
+            text-align: center;
+            padding: 25px 25px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        
+
+        .navbar a.home {
+            font-size: 20px;
+        }
+
+        .navbar a.artists {
+            font-size: 20px;
+        }
+
+        .navbar a.about {
+            font-size: 20px;
+        }
+       
+    
+
+    footer {
+      margin-top: 0%;
+      color: #070606;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  </style>
+
+<body>
+  <div class="navbar">
+    <a href="/home.html" class="inactive">HOME</a>
+    <a href="/artists.html" class="active">ARTISTS</a>
+    <a href="/About_page.html" class="inactive">ABOUT</a>
+    <a href="/search_page.html"class="inactive" >SEARCH</a>
+        <a href="/spotlight.html" class="inactive">SPOTLIGHT</a>
+        <a href="/playlist" class="inactive">PLAYLIST</a>
+    <img style="float: right;border-radius: 100px;margin-right: 3%;" width="75px;" src="static/l1.png">
+  </div>
+	<div class="left">
+        <div class="left-heading">
+            <h2 style="text-align:center">NENE RAJU NENE MANTRI</h2>
+            </div>
+            <div class="left-content">
+            <div class="left-row">
+            <div class="left-col">
+                <p id="101">Devuditho Samaram&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [3 min 28 sec]</p>
+                <button class="add-song-btn" data-id="101" style="background-color:black;color:white">Add</button></div>
+            <div class="left-col">
+                <p id="102">Jogendra Jogendra&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  [1 min 28 sec]</p>
+                <button class="add-song-btn" data-id="102" style="background-color:black;color:white">Add</button>
+            </div>
+            <div class="left-col">
+                <p id="103">Kathulatho  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [2 min 14 sec]</p>
+                <button class="add-song-btn" data-id="103" style="background-color:black;color:white">Add</button></div>
+            <div class="left-col">
+            <p id="104">Radhamma Radhamma  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [4 min 17 sec]</p>
+            <button class="add-song-btn" data-id="104" style="background-color:black;color:white">Add</button>  </div>
+            <div class="left-col"> 
+                <p id="105">Sukhibhava &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [4 min 15 sec]</p>
+                <button class="add-song-btn" data-id="105" style="background-color:black;color:white">Add</button> </div>
+            </div>
+            </div>
+            </div>
+	  <script src="static/adding.js"></script>
+
+            <div class="right" style="background-color:rgb(190, 148, 84)"><br><br><br>
+                <img src="static/anup2.png" alt="Song Cover" class="image" style="margin-left:20%">
+                <h2 id="artist" style="text-align:center">Anup Rubens</h2>
+            
+                <div class="right-content" >
+                  <div class="right-row">
+                  <div class="right-col">
+                    <a href="/paisavasool.html" class="inactive"> <p >Paisa Vasool  </p></a>
+                  </div>
+                  <div class="right-col">
+                    <a href="/nrnm.html" class="active"><p>Nene Raju Nene Mantri&nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;15 min 42 sec</p></a>
+      
+                  </div>
+                  <div class="right-col">
+                    <a href="/sog.html" class="inactive"><p >Soggade Chinninayina</p></a>
+                  </div>
+                  <div class="right-col">
+                    <a href="/manaam.html" class="inactive"><p>Manam</p></a>
+                  </div>
+                  <div class="right-col"> 
+                    <a href="/temper.html" class="inactive"><p>Temper</p></a>
+                  </div>
+                  </div>
+                  </div>
+                  <footer>
+                    <button><a href="/About_page.html">ABOUT</a></button>
+                    <p>© 2023 TuneTour</p>
+                    <p>Hope You Are Having A Great Time!!!</p>
+                  </footer>
+    
+                </div>
+                
+                </body>
+                </html>

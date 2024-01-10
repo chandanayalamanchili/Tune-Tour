@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>My Favorite Artist</title>
+	<link rel="stylesheet" type="text/css" href="static/styles.css"> 
+	<style>  .navbar {
+    overflow: hidden;
+    background-color: hsl(0, 0%, 0%);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #fbe5e5;
+    text-align: center;
+    padding: 25px 25px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+
+
+
+.navbar a.home {
+    font-size: 20px;
+}
+
+.navbar a.artists {
+    font-size: 20px;
+}
+
+.navbar a.about {
+    font-size: 20px;
+}
+
+.navbar a.about {
+    font-size: 20px;
+}
+
+     </style> 
+</head>
+<body>
+	 <div class="navbar">
+    <a href="/home.html" class="inactive">HOME</a>
+    <a href="/artists.html" class="inactive">ARTISTS</a>
+    <a href="/About_page.html" class="inactive">ABOUT</a>
+    <a href="/search_page.html"class="inactive" >SEARCH</a>
+    <a href="/spotlight.html" class="active">SPOTLIGHT</a>
+    <a href="/playlist" class="inactive">PLAYLIST</a>
+
+        <img style="float: right;border-radius: 100px;margin-right: 3%;" width="75px;" src="static/l1.png">
+      </div>
+  <style> 
+    body {
+      background-color: black;
+    }
+  </style> 
+  
+	<div class="container"> 
+		<div class="top-section">
+			<img id="artist-image" src="static/spotlight.png" alt="My Favorite Artist">
+      
+		 <div class="artist-info">
+				<h2>ANIRUDH RAVICHANDER</h2>
+				<p data-text="Anirudh Ravichander is an Indian music composer, music producer and singer who works in the Indian film industry. He has won three Filmfare Awards, nine SIIMA Awards, six Edison Awards and five Vijay Awards. He made his debut in the Tamil film, 3 directed by Aishwarya R. Dhanush. The song, 'Why This Kolaveri Di', that Anirudh had composed for the Tamil film 3, went viral on YouTube and tracked more than 85 million views. Some of his superhit albums like Vikram, Jersey, Agnathavasi, VIP and Kaithi are available on TuneTour. Feel free to review and rate them."></p>
+			</div>
+		</div> 
+		 <div class="bottom-section">
+			<div class="album-info">
+				<div style = "display: flex; align-items: center;">
+				<img id="album-image" src="static/count.png" alt="Album Image" style="float: left; margin-right: 10px;">
+				
+           <div id="countdown-container">
+           
+            <h3 id="countdown-timer"></h3>
+            <p>Find the most awaited Album of the year "MASTER" by Anirudh, exclusively on TUNETOUR from 30th June.</p>
+          </div>
+        </div>
+			</div> 
+		</div>
+    
+	</div>
+  <div class="review-section">
+    <h3  style="color: #fbe5e5;">Leave a Review</h3>
+    <form>
+      <label for="name" style="color: #fbe5e5;">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+      
+      <label for="rating"  style="color: #fbe5e5;">Rating:</label><br>
+      <input type="radio" id="star5" name="rating" value="5" required>
+      <label for="star5" title="5 stars"  style="color: #fbe5e5;">5 stars</label>
+      <input type="radio" id="star4" name="rating" value="4" required>
+      <label for="star4" title="4 stars"  style="color: #fbe5e5;">4 stars</label>
+      <input type="radio" id="star3" name="rating" value="3" required>
+      <label for="star3" title="3 stars"  style="color: #fbe5e5;">3 stars</label>
+      <input type="radio" id="star2" name="rating" value="2" required>
+      <label for="star2" title="2 stars"  style="color: #fbe5e5;">2 stars</label>
+      <input type="radio" id="star1" name="rating" value="1" required>
+      <label for="star1" title="1 star"  style="color: #fbe5e5;">1 star</label><br><br>
+      
+      <label for="review"  style="color: #fbe5e5;">Review:</label><br>
+      <textarea id="review" name="review" rows="5" cols="50" required></textarea><br><br>
+      
+      <input type="button" value="Submit" onclick="submitReview()">
+    </form>
+  </div>
+  <div class="reviews-section" >
+    <h3  style="color: #fbe5e5;">Reviews</h3>
+    <table id="reviews-table"  style="color: #fbe5e5;">
+      <tr>
+        <th  style="color: #fbe5e5;">Name</th>
+        <th  style="color: #fbe5e5;">Rating</th>
+        <th  style="color: #fbe5e5;">Review</th>
+      </tr>
+    </table>
+  </div>
+        
+	
+	 <footer>
+		<button><a href="/About_page.html">ABOUT</a></button>
+		<p>© 2023 TuneTour</p>
+		<p>Hope You Are Having A Great Time!!!</p>
+	  </footer> 
+	 </div>
+	<script src="static/script.js"></script>
+</body>
+</html>

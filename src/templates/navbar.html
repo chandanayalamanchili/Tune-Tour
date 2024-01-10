@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+   
+<head>navbar
+  
+</head>
+<style>
+    .navbar {
+        overflow: hidden;
+        background-color: hsl(0, 0%, 0%);
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .navbar a {
+        float: left;
+        display: block;
+        color: #fbe5e5;
+        text-align: center;
+        padding: 25px 25px;
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+   
+    .navbar a.home {
+        font-size: 20px;
+    }
+
+    .navbar a.artists {
+        font-size: 20px;
+    }
+
+    .navbar a.about {
+        font-size: 20px;
+    }
+   
+</style>
+<body>
+    <div class="navbar">
+        <a href="home.html" class="inactive">HOME</a>
+    <a href="artists.html" class="active">ARTISTS</a>
+    <a href="About_page.html" class="inactive">ABOUT</a>
+    <a href="search_page.html"class="inactive" >SEARCH</a>
+        <a href="spotlight.html" class="inactive">SPOTLIGHT</a>
+        <img style="float: right;border-radius: 100px;margin-right: 3%;" width="75px;" src="l1.png">
+      </div>
+      <script src="navbar.js"></script>
+</body>
+</html>

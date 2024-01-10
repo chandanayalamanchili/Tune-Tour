@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My Playlist</title>
+  <link rel="stylesheet" type="text/css" href="static/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    function remove(elem) {
+      var songId = $(elem).attr('data-id');
+      console.log(songId);
+      console.log('songId:', songId); // check the value of songId
+      $.ajax({
+        url: '/remove-song',
+        method: 'POST',
+        data: { songId: songId },
+        success: function (response) {
+          console.log('Response:', response); // check the response from the server
+          window.location.reload();
+        },
+        error: function (xhr, status, error) {
+          console.log(error);
+        }
+      });
+    }
+  </script>
+  <style>
+    .navbar {
+      overflow: hidden;
+      background-color: hsl(0, 0%, 0%);
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: #fbe5e5;
+      text-align: center;
+      padding: 25px 25px;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .navbar a.home {
+      font-size: 20px;
+    }
+
+    .navbar a.artists {
+      font-size: 20px;
+    }
+
+    .navbar a.about {
+      font-size: 20px;
+    }
+
+    footer {
+      margin-top: 0%;
+      color: #070606;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: 20px auto;
+      /* to center the table */
+      font-size: 18px;
+      width: 80%;
+    }
+
+    th,
+    td {
+      padding: 10px 15px;
+      border: 1px solid #020202;
+      text-align: center;
+    }
+
+    th {
+      background-color: #989494;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #beb9b9;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #beb9b9;
+    }
+
+    /* add hover styles for table rows */
+    tbody tr:hover {
+      background-color: #5d5c5c;
+    }
+
+    .remove-song-btn:hover {
+      background-color: #7b7676;
+      color: #fff;
+      padding: 10px 40px;
+
+    }
+
+    .remove-song-btn {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    body {
+      background-color: rgb(87, 83, 83);
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="/home.html" class="inactive">HOME</a>
+    <a href="/artists.html" class="inactive">ARTISTS</a>
+    <a href="/About_page.html" class="inactive">ABOUT</a>
+    <a href="/search_page.html" class="inactive">SEARCH</a>
+    <a href="/spotlight.html" class="inactive">SPOTLIGHT</a>
+    <a href="/playlist" class="active">PLAYLIST</a>
+    <img style="float: right;border-radius: 100px;margin-right: 3%;" width="75px;" src="static/l1.png">
+  </div>
+  <br><br><br>
+  <h1 style="text-align: center;"> MY PLAYLIST</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Song</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for song in songs %}
+      <tr>
+        <td>{{ song }}</td>
+        <td>
+          <button class="remove-song-btn" data-id="{{ song[0] }}" onclick="remove(this)">Remove</button>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+
+
+
+  </table>
+  <footer>
+    <button><a href="/About_page.html">ABOUT</a></button>
+    <p>© 2023 TuneTour</p>
+    <p>Hope You Are Having A Great Time!!!</p>
+  </footer>
+  <script src="static/adding.js"></script>
+  <script src="static/navbar.js"></script>
+</body>
+
+</html>

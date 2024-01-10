@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>keeravanialbum</title>
+    <style>
+        body {
+            background-color: rgb(51, 34, 34);
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .item {
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            text-align: center;
+            width: 20%; 
+        }
+        .item img {
+            width: 100%;
+        }
+        p{
+            margin-top:-5%;
+            font-style: italic;
+        }
+        .bg-image{
+            position: fixed;
+            top:0;
+            left:0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+            z-index: -1;
+            opacity: 0.15;
+        }
+        img:hover {
+            opacity: 0.6;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: hsl(0, 0%, 0%);
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #fbe5e5;
+            text-align: center;
+            padding: 25px 25px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        
+        .navbar a.home {
+            font-size: 20px;
+        }
+
+        .navbar a.artists {
+            font-size: 20px;
+        }
+
+        .navbar a.about {
+            font-size: 20px;
+        }
+        
+
+       
+    footer {
+      color: #fffefe;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/home.html" class="inactive">HOME</a>
+        <a href="/artists.html" class="active">ARTISTS</a>
+        <a href="/About_page.html" class="inactive">ABOUT</a>
+        <a href="/search_page.html"class="inactive" >SEARCH</a>
+            <a href="/spotlight.html" class="inactive">SPOTLIGHT</a>
+            <a href="/playlist" class="inactive">PLAYLIST</a>
+        <img style="float: right;border-radius: 100px;margin-right: 3%;" width="75px;" src="static/l1.png">
+    </div>
+    <img class="bg-image" src="static/keeravani.png">
+    <br><br><br><br><h2 style="text-align:center;color:white">M.M.KEERAVANI</h2>
+    <div class="container">
+        <div class="item">
+            <a href="/rrr.html"><img src="static/rrr.png" alt="Image 1"></a>
+            <!-- <h4 style="color:white">RRR<br>-Keeravani</h4><p style="color:antiquewhite">7 songs<br>2022 Release</p> -->
+        </div>
+        <div class="item">
+            <a href="/na.html"><img src="static/na.png" alt="Image 2"></a>
+            <!-- <h4 style="color:white">Na Autograph<br>-Keeravani</h4><p style="color:antiquewhite">6 songs<br>2004 Release</p> -->
+        </div>
+        <div class="item">
+            <a href="/magadheera.html"> <img src="static/magadheera.png" alt="Image 3"></a>
+            <!-- <h4 style="color:white">Magadheera<br>-Keeravani</h4><p style="color:antiquewhite">6 songs<br>2009 Release</p> -->
+        </div>
+    </div>
+    <div class="container">
+        <div class="item">
+            <a href="/bahubali.html"> <img style="margin-left: 100%;" src="static/bahubali1.png" alt="Image 4"></a>
+            <!-- <h4 style="margin-left: 180%;width:15vw;color:white">Bahubali The Conclusion <br>-Keeravani</h4><p style="margin-left: 180%;width:15vw;color:antiquewhite">5 songs<br>2017 Release</p> -->
+        </div>
+        <div class="item" style="margin-right:10%;">
+            <a href="/rrkk.html">  <img style="margin-right: 180%;" src="static/rrkk.png" alt="Image 5"></a>
+            <!-- <h4 style="margin-right: 180%;width:15vw;color:white">Rama Rama Krishna Krishna<br/>-Keeravani</h4><p style="margin-right: 180%;width:15vw;color:antiquewhite">6 songs<br>2010 Release</p> -->
+        </div>
+    </div>
+    <footer>
+        <button><a href="/About_page.html">ABOUT</a></button>
+        <p><b>© 2023 TuneTour</b></p>
+        <p><b>Hope You Are Having A Great Time!!!</b></p>
+      </footer>
+      <script src="static/navbar.js"></script>
+</body>
+</html>

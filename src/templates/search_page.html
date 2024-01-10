@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="static/search_page.css">
+
+    <title>Search Page</title>
+    <style>  .navbar {
+      overflow: hidden;
+      background-color: hsl(0, 0%, 0%);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+  }
+  
+  .navbar a {
+      float: left;
+      display: block;
+      color: #fbe5e5;
+      text-align: center;
+      padding: 25px 25px;
+      text-decoration: none;
+      font-size: 15px;
+  }
+  
+  
+  
+  
+  .navbar a.home {
+      font-size: 20px;
+  }
+  
+  .navbar a.artists {
+      font-size: 20px;
+  }
+  
+  .navbar a.about {
+      font-size: 20px;
+  }
+  
+  .navbar a.about {
+      font-size: 20px;
+  }
+  footer {
+  margin-top: 0;
+  color: #070606;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+       </style> 
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="/home.html" class="inactive">HOME</a>
+    <a href="/artists.html" class="inactive">ARTISTS</a>
+    <a href="/About_page.html" class="inactive">ABOUT</a>
+    <a href="/search_page.html"class="active" >SEARCH</a>
+    <a href="/spotlight.html" class="inactive">SPOTLIGHT</a>
+    <a href="/playlist" class="inactive">PLAYLIST</a>
+
+        <img style="float: right;border-radius: 100px;margin-right: 3%;" width="75px;" src="static/l1.png">
+      </div>
+    <h1>Search for your favorite music!</h1>
+    <form>
+        <label for="searchTerm" style="font-size: x-large;">Search Term:</label>
+        <input type="text" id="searchTerm" name="searchTerm" required>
+        <br>
+        <label for="maxDuration" style="font-size: x-large;">Maximum Duration (in minutes):</label>
+        <input type="number" id="maxDuration" name="maxDuration" min="1" max="60">
+        <br>
+        <label for="explicit"  style="font-size: x-large;">Explicitness:</label>
+        <select id="explicit" name="explicit">
+            <option value="">All</option>
+            <option value="explicit">Explicit</option>
+            <option value="cleaned">Clean</option>
+        </select>
+        <br>
+        <button type="submit">Search</button>
+        <button type="button" id="clearFilters">Clear Filters</button>
+    </form>
+    <div id="results"></div>
+    <script src="static/search_page.js"></script>
+    <footer>
+        <button><a href="/About_page.html">ABOUT</a></button>
+        <p>© 2023 TuneTour</p>
+        <p>Hope You Are Having A Great Time!!!</p>
+      </footer>
+
+</body>
+
+</html>

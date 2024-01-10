@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>artistspage</title>
+  <style>
+     body {
+            background-image: url("static/artistsbg.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    img:hover {
+      opacity: 0.8;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: hsl(0, 0%, 0%);
+      position: sticky;
+      top: 0;
+      /* height: 10%; */
+      width: 100%;
+      z-index: 2;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: #fbe5e5;
+      text-align: center;
+      padding: 25px 25px;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+   
+    .navbar a.home {
+      font-size: 20px;
+    }
+
+    .navbar a.artists {
+      font-size: 20px;
+    }
+
+    .navbar a.about {
+      font-size: 20px;
+    }
+
+   
+
+    footer {
+      color: #080808;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  </style>
+</head>
+
+<!-- <body style="background-image: linear-gradient(white,black,white,black,white);"> -->
+  <div class="navbar">
+    <a href="/home.html" class="inactive">HOME</a>
+    <a href="/artists.html" class="active">ARTISTS</a>
+    <a href="/About_page.html" class="inactive">ABOUT</a>
+    <a href="/search_page.html" class="inactive">SEARCH</a>
+    <a href="/spotlight.html" class="inactive">SPOTLIGHT</a>
+    <a href="/playlist" class="inactive">PLAYLIST</a>
+    <img style="float: right;border-radius: 100px;margin-right: 3%;" width="75px;" src="static/l1.png">
+  </div>
+  <h1 style="text-align:center"> ARTISTS</h1>
+  <div style="display: flex; flex-wrap: wrap;">
+    <div style="flex: 10%; padding: 9px;">
+      <a href="/keeravani.html"> <img src="static/kreem.png" alt="Photo 1" style="width:100%;border-radius: 100px;height:100%"></a>
+      <a href="/keeravani.html"> <div style="text-align: center;font-size: x-large;color: #080808"><b>M.M.Keeravani</b></div></a>
+    </div>
+    <div style="flex: 10%; padding: 9px;">
+      <a href="/anirudh.html"><img src="static/ar.png" alt="Photo 2" style="width:100%;border-radius: 100px;height:100%"></a>
+      <a href="/anirudh.html"><div style="text-align: center;font-size: x-large;color: #080808"><b>Anirudh Ravichander</b></div></a>
+    </div>
+    <div style="flex: 10%; padding: 9px;">
+      <a href="/thaman.html"><img src="static/t.png" alt="Photo 3" style="width:100%;border-radius: 100px;height:100%"></a>
+      <a href="/thaman.html"><div style="text-align: center;font-size: x-large;color: #080808"><b>S.S.Thaman</b></div></a>
+    </div>
+    <div style="flex: 10%; padding: 9px;">
+      <a href="/dsp.html"><img src="static/dspal.png" alt="Photo 4" style="width:100%;border-radius: 100px;height:100%"></a>
+      <a href="/dsp.html"><div style="text-align: center;font-size: x-large;color: #080808"><b>Devi Sri Prasad</b></div></a>
+    </div>
+  </div>
+  <br><br>
+  <div style="display: flex; flex-wrap: wrap;">
+    <div style="flex: 8%; padding: 9px;">
+      <a href="/amittrivedialbum.html"><img src="static/amittrivedi.png" alt="Photo 1"
+          style="width:100%;border-radius: 100px;height:100%"></a>
+          <a href="/amittrivedialbum.html"><div style="text-align: center;font-size: x-large;color: #080808"><b>Amit Trivedi</b></div></a>
+    </div>
+    <div style="flex: 8%; padding: 9px;">
+      <a href="/rahmanalbum.html"><img src="static/arhal.png" alt="Photo 2" style="width:100%;border-radius: 100px;height:100%"></a>
+      <a href="/rahmanalbum.html"><div style="text-align: center;font-size: x-large;color: #080808"><b>A.R.Rahman</b></div></a>
+    </div>
+    <div style="flex: 8%; padding: 9px;">
+      <a href="/ilayaraja.html"><img src="static/i.png" alt="Photo 3" style="width:100%;border-radius: 100px;height:100%"></a>
+      <a href="/ilayaraja.html"><div style="text-align: center;font-size: x-large;color: #080808;"><b>Ilayaraja</b></div></a>
+    </div>
+    <div style="flex: 8%; padding: 9px;">
+      <a href="/anuprubens.html"><img src="static/anupal.png" alt="Photo 4" style="width:100%;border-radius: 100px;height:100%"></a>
+      <a href="/anuprubens.html"><div style="text-align: center;font-size: x-large;color: #080808"><b>Anup Rubens</div></a>
+    </div>
+  </div>
+  <footer>
+    <button><a href="/About_page.html">ABOUT</a></button>
+    <p><b>© 2023 TuneTour</b></p>
+    <p><b>Hope You Are Having A Great Time!!!</b></p>
+  </footer>
+  <script src="static/navbar.js"></script>
+</body>
+
+</html>

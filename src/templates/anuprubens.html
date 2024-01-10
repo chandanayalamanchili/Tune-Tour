@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>anupalbum</title>
+    <style>
+        body {
+            background-color: rgb(51, 34, 34);
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .item {
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            text-align: center;
+            width: 20%; 
+        }
+        .item img {
+            width: 100%;
+        }
+        p{
+            margin-top:-5%;
+            font-style: italic;
+        }
+        .bg-image{
+            position: fixed;
+            top:0;
+            left:0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+            z-index: -1;
+            opacity: 0.15;
+        }
+        img:hover {
+            opacity: 0.4;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: hsl(0, 0%, 0%);
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #fbe5e5;
+            text-align: center;
+            padding: 25px 25px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        
+        .navbar a.home {
+            font-size: 20px;
+        }
+
+        .navbar a.artists {
+            font-size: 20px;
+        }
+
+        .navbar a.about {
+            font-size: 20px;
+        }
+      
+
+        footer {
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/home.html" class="inactive">HOME</a>
+        <a href="/artists.html" class="active">ARTISTS</a>
+        <a href="/About_page.html" class="inactive">ABOUT</a>
+        <a href="/search_page.html" class="inactive">SEARCH</a>
+        <a href="/spotlight.html" class="inactive">SPOTLIGHT</a>
+        <a href="/playlist" class="inactive">PLAYLIST</a>
+        <img style="float: right;border-radius: 100px;margin-right: 3%;" width="75px;" src="static/l1.png">
+      </div>
+    <img class="bg-image" src="static/anup.png">
+    <br><br><br><br><h2 style="text-align:center;color:white">ANUP RUBENS</h2>
+    <div class="container">
+        <div class="item">
+           <a href="/paisavasool.html"> <img src="static/pv.png" alt="Image 1"></a>
+            <!-- <h4 style="color:white">Paisa Vasool<br>-Anup Rubens</h4><p style="color:antiquewhite">6 songs<br>2017 Release</p> -->
+        </div>
+        <div class="item">
+            <a href="/nrnm.html">   <img src="static/nrnm.png" alt="Image 2"></a>
+            <!-- <h4 style="color:white">Nene Raju Nene Mantri<br>-Anup Rubens</h4><p style="color:antiquewhite">6 songs<br>2017 Release</p> -->
+        </div>
+        <div class="item">
+            <a href="/soggade.html">  <img src="static/sog.png" alt="Image 3"></a>
+            <!-- <h4 style="color:white">Soggade Chinninayina<br>-Anup Rubens</h4><p style="color:antiquewhite">6 songs<br>2016 Release</p> -->
+        </div>
+    </div>
+    <div class="container">
+        <div class="item">
+            <a href="/manam.html">    <img style="margin-left: 100%;" src="static/manam.png" alt="Image 4"></a>
+            <!-- <h4 style="margin-left: 180%;width:15vw;color:white">Manam <br>-Anup Rubens</h4><p style="margin-left: 180%;width:15vw;color:antiquewhite">6 songs<br>2014 Release</p> -->
+        </div>
+        <div class="item">
+            <a href="/temper.html">   <img style="margin-right: 180%;" src="static/temper.png" alt="Image 5"></a>
+            <!-- <h4 style="margin-right: 180%;width:15vw;color:white">Temper<br/>-Anup Rubens</h4><p style="margin-right: 180%;width:15vw;color:antiquewhite">6 songs<br>2015 Release</p> -->
+        </div>
+    </div>
+    <footer>
+        <button><a href="/About_page.html">ABOUT</a></button>
+        <p><b>© 2023 TuneTour</b></p>
+        <p><b>Hope You Are Having A Great Time!!!</b></p>
+      </footer>
+      <script src="static/navbar.js"></script>
+</body>
+</html>
